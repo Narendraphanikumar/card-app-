@@ -5,9 +5,13 @@ pipeline{
     }
     stages{
         stage("Git Checkout"){
-            steps
+            steps{
+                git credentialsId: 'narendra', url: 'https://github.com/Narendraphanikumar/card-app-'
+            }
+        }    
         stage('maven build'){
             steps{
+                
                 sh "mvn clean package"
             }
         }
