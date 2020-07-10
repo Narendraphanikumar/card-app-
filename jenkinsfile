@@ -4,6 +4,8 @@ pipeline{
     PATH ="/home/ubuntu:$PATH"
     }
     stages{
+        stage("Git Checkout"){
+            steps
         stage('maven build'){
             steps{
                 sh "mvn clean package"
