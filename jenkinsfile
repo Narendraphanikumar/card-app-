@@ -1,0 +1,20 @@
+pipeline{
+    agent any
+    environment{
+    PATH ="/home/ubuntu:$PATH"
+    }
+    stages{
+        stage('maven build'){
+            steps{
+                sh "mvn clean package"
+            }
+        }
+     }
+ }    
+     
+     
+                
+            
+    
+       
+       
